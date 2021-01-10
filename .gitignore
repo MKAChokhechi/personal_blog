@@ -2,5 +2,6 @@
 .idea
 backend/.idea
 backend/restvenv
+backend/db.sqlite3
 
 frontend/node_modules
