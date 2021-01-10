@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+backend/.idea
+backend/restvenv
+
+frontend/node_modules
