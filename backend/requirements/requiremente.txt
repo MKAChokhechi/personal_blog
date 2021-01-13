@@ -17,6 +17,8 @@ defer==1.0.6
 distro==1.5.0
 distro-info===0.23ubuntu1
 Django==3.1.5
+django-ckeditor==6.0.0
+django-js-asset==1.2.2
 docker==4.1.0
 dockerpty==0.4.1
 docopt==0.6.2
