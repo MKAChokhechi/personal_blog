@@ -6,6 +6,7 @@ from .category import Category
 
 
 class Article(models.Model):
+    objects = None
     title = models.CharField(max_length=128, null=False, blank=False)
     cover = models.ImageField(upload_to='files/article_cover', null=False, blank=False)
     content = RichTextField()
