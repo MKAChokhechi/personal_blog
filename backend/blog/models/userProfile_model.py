@@ -1,7 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-# from .article import Article
-# from .category import Category
 
 
 class UserProfile(models.Model):

@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models.article import Article
-from .models.category import Category
-from .models.userProfile import UserProfile
+from .models.article_model import Article
+from .models.category_model import Category
+from .models.userProfile_model import UserProfile
 
 
 class UserProfileAdmin(admin.ModelAdmin):

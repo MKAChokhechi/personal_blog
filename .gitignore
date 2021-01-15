@@ -1,7 +1,12 @@
 .DS_Store
 .idea
+#backend
 backend/.idea
 backend/restvenv
 backend/db.sqlite3
+backend/files
+backend/staticfiles
 
+
+#frontend
 frontend/node_modules
