@@ -1,0 +1,30 @@
+.contact {
+  padding-top: 80px;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include responsive(640px) {
+    display: flex;
+    font-size: 10px;
+    padding: 98px 0;
+  }
+  &-h3{
+    padding-top: 3%;
+    font-family: "Chunkfive";
+    font-size: 500%;
+  }
+  &-a {
+    color:#ee4848;
+    text-decoration: none;
+    font-family: "Chunkfive";
+    font-size: 500%;
+  }
+  &-a:hover  {
+    color:#ee4848;
+    text-decoration: none;
+    font-family: "Chunkfive";
+    font-size: 500%;
+  }
+}

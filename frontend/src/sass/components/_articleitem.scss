@@ -1,0 +1,77 @@
+.page {
+  width: 100%;
+  background-color: #f5f5f5;
+  @include responsive(765px) {
+    display: flex;
+    justify-content: center;
+    margin-left: 4.5%;
+  }
+  &__img {
+    padding-top:5rem ;
+    border-radius: 1.4rem;
+    width: 100%;
+    height: auto;
+  }
+
+  &__content h1 {
+    font-size: 45px;
+    font-weight: 700;
+  }
+  &__item{
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    direction: rtl;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: auto;
+    background: #e5e5e5;
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, .5);
+
+    color: $black;
+    @include responsive(765px) {
+      width: 300px;
+      bottom: -500px;
+    }
+
+    &-h6 {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    &-h4 {
+      font-size: 30px;
+      font-weight: 600;
+      color: #0c0f16;
+      margin-bottom: 10px;
+      margin-right: 0.5rem;
+      @include responsive(765px) {
+        font-size: 15px;
+        margin-bottom: 10px;
+        margin-right: 0.5rem;
+      }
+
+    }
+
+    &-text {
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-align: right;
+      margin-right: 1.5rem;
+      @include responsive(765px) {
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-align: right;
+        margin-right: 0.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.notfound {
+  padding-top: 80px;
+  padding-bottom: 9%;
+  display: flex;
+  justify-content: center;
+  @include responsive(640px) {
+    display: flex;
+    font-size: 10px;
+    padding: 129px 0;
+  }
+  &-h1 {
+    padding-top: 7%;
+
+    font-family: "Chunkfive";
+    font-size: 500%;
+  }
+}

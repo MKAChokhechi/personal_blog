@@ -1,0 +1,38 @@
+.footer {
+  width: 100%;
+  height: 45vh;
+  //background-color: rgba(37,40,57,0.9);
+  background-color:#252839;
+  @include flexCenter;
+  color: $white;
+
+  &__content {
+    text-align: center;
+
+    &__img {
+      width: 40%;
+      height: auto;
+    }
+    &-links a {
+      text-decoration: none;
+      color: $white;
+      margin-left: 15px;
+      font-size: 17px;
+    }
+    &-span {
+      display: inline-block;
+      height: 15px;
+      width: 1.5px;
+      background: $white;
+      margin-left: 20px;
+      transform: rotate(10deg);
+    }
+  }
+
+  &__content-h1 {
+    font-size: 75px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+}

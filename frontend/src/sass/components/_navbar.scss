@@ -1,0 +1,55 @@
+.navbarr {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  //background-color:#494948;
+  background-color:#252839;
+  height: 80px;
+  transition: all 0.5s linear;
+  z-index: 5;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+  }
+  &__left {
+    display: flex;
+    justify-content: center;
+    @include responsive(765px) {
+
+      margin-right: 0;
+    }
+  }
+  &__left img {
+    width: 50px;
+    height: auto;
+  }
+  &__icon {
+    position: relative;
+    font-size: 2rem;
+  }
+  &__right {
+    display: flex;
+    list-style: none;
+    @include responsive(765px) {
+      display: flex;
+      list-style: none;
+      margin-top: 10%;
+    }
+    & li a {
+      color: $white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 15px 7px;
+      margin: 10px 15px;
+      @include responsive(765px) {
+        margin-right: -50%;
+        font-size: 5px;
+      }
+    }
+  }
+}
+

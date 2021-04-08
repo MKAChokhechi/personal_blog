@@ -23,6 +23,19 @@ SECRET_KEY = '0xcvmay)k^nval!-sv(krvs+zg71e&l5g*1(b!4lbihvy9#dwz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = [
+    "http://192.168.1.107:3000",
+    "http://localhost:3000",
+]
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
 
 ALLOWED_HOSTS = []
 
@@ -37,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     'ckeditor',
     'blog',
 ]
@@ -49,6 +63,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -130,7 +146,7 @@ STATICFILES_DIRS = [
 CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/'
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
-#Media Settings
+# Media Settings
 
-MEDIA_URL ='files/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'')
+MEDIA_URL = 'files/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '')

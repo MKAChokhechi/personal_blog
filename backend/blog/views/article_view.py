@@ -7,4 +7,9 @@ from ..serializers.article_serializer import ArticleSerializer
 class AllArticleViewSet(viewsets.ModelViewSet):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
+
+class SingleArticleViewSet(viewsets.ModelViewSet):
+    lookup_field = 'pk'
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
