@@ -7,7 +7,9 @@
   height: 80px;
   transition: all 0.5s linear;
   z-index: 5;
-
+  @include responsive(765px) {
+    display: block;
+  }
   &__content {
     display: flex;
     justify-content: space-between;
@@ -30,13 +32,28 @@
     position: relative;
     font-size: 2rem;
   }
+  & figure {
+    display: none;
+    @include responsive(765px){
+      margin-top: 10px;
+      display: block;
+      color: red;
+      //margin-right: -15px;
+    }
+  }
   &__right {
     display: flex;
     list-style: none;
     @include responsive(765px) {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #252839;
+      margin-top:180%;
+      margin-left:  -80%;
+      width: 100%;
       list-style: none;
-      margin-top: 10%;
+      transition: 30ms ease all;
     }
     & li a {
       color: $white;
@@ -46,8 +63,16 @@
       padding: 15px 7px;
       margin: 10px 15px;
       @include responsive(765px) {
-        margin-right: -50%;
-        font-size: 5px;
+        display: flex;
+        color: $white;
+        text-decoration: none;
+        font-size: 12px;
+        }
+    }
+    & li a:hover {
+
+      @include responsive(765px) {
+       //background: #89d0b2;
       }
     }
   }

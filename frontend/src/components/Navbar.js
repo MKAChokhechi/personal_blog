@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 
 const Navbar = () => {
     const [state, setState] = React.useState(false);
+    const [navOpen,setNavOpen] = React.useState(false);
     React.useEffect(() => {
         window.addEventListener("scroll", handleScroll);
     }, [])
@@ -15,38 +16,46 @@ const Navbar = () => {
     }
     return (
         <div className={`navbarr ${state ? 'whiteBg' : 'transparent'} `}>
-            <div>
                 <div className="container">
                     <div className="navbarr__content">
                         <div className="navbarr__left"><img src={state ? '/images/Logo1.png' : '/images/Logo2.png'}
                                                             alt="logo"/></div>
 
-                        <ul className="navbarr__right">
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/showcase">Showcases</Link>
-                            </li>
+                        <figure onClick={()=> setNavOpen(!navOpen)} >
+                            <i className={navOpen ?  'fa fa-bars':'fa fa-times'}> </i>
+                        </figure>
 
-                            <li>
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li>
-                                <Link to="/contact">Contact</Link>
-                            </li>
-                            <li>
-                                <Link to="/articles">Blog</Link>
-                            </li>
-                            <li>
-                                <a style={{color: '#ee4848'}}
-                                   href='https://www.linkedin.com/in/muhammad-ali-al-chokhachi-kadhimi-a29318201/'>LinkedIn</a>
-                            </li>
-                        </ul>
+                        {!navOpen?(
+                            <ul className="navbarr__right">
+                                <li>
+                                    <Link to="/">Home</Link>
+                                </li>
+                                <li>
+                                    <Link to="/showcase">Showcases</Link>
+                                </li>
+
+                                <li>
+                                    <Link to="/about">About</Link>
+                                </li>
+                                <li>
+                                    <Link to="/contact">Contact</Link>
+                                </li>
+                                <li>
+                                    <Link to="/articles">Blog</Link>
+                                </li>
+                                <li>
+                                    <a style={{color: '#ee4848'}}
+                                       href='https://www.linkedin.com/in/muhammad-ali-al-chokhachi-kadhimi-a29318201/'>LinkedIn</a>
+                                </li>
+                            </ul>
+                        )
+                            :
+                            ('')
+
+                        }
 
                     </div>
                 </div>
-            </div>
         </div>
     )
 }
